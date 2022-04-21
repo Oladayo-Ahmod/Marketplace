@@ -15,5 +15,9 @@ contract('MarketPlace', (accounts)=>{
             assert.notEqual(address,undefined)
             assert.notEqual(address,null)
         })
+        it('has a valid name', async () =>{
+            let name = await MarketPlace.name
+            assert.equal(name,'Market Place')
+        })
     })
 })
