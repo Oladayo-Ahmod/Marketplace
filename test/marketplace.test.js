@@ -32,7 +32,12 @@ contract('MarketPlace', (accounts)=>{
         })
         it('creates product', async () =>{
             assert.equal(productCount,1)
-            console.log(result.logs)
+           const event = result.logs[0].args
+           assert.equal(event.id.toNumber(),productCount,'id is correct')
+           assert.equal(event.name,'Iphone XR','name is correct')
+           assert.equal(event.owner,'name is correct')
+        //    assert.equal(event.price,'10','id is correct')
+           assert.equal(event.purchased,false,'purchased is correct')
         })
     })
 })
