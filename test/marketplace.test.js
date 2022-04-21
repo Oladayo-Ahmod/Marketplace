@@ -32,7 +32,7 @@ contract('MarketPlace', (accounts)=>{
         })
         it('creates product', async () =>{
             assert.equal(productCount,1)
-            console.log(result.logs())
+            console.log(result.logs)
         })
     })
 })
