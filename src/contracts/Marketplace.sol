@@ -15,13 +15,22 @@ contract Marketplace {
     bool purchased;
   }
   
+  // create product creation event
+  event product_created(
+    uint id,
+    string name,
+    uint price,
+    string owner,
+    bool purchased
+  );
+
   constructor() public {
     name = "Market Place";
   }
 
   // create product
   function create_product(string memory _name, uint _price) public{
-    products_count ++; // increment product count
+    products_count++; // increment product count
     products[products_count] = Product(products_count,_name,_price,msg.sender,false); 
   }
 }
