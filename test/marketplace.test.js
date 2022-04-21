@@ -9,14 +9,14 @@ contract('MarketPlace', (accounts)=>{
 
     describe('deployment', async () =>{
         it('deployed successfully', async () =>{
-            let address = await MarketPlace.address
+            let address = await MarketPlace.address;
             assert.notEqual(address,0x0)
             assert.notEqual(address,'')
             assert.notEqual(address,undefined)
             assert.notEqual(address,null)
         })
         it('has a valid name', async () =>{
-            let name = await MarketPlace.name
+            const name = await marketplace.name();
             assert.equal(name,'Market Place')
         })
     })
