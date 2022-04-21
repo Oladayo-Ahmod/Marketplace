@@ -30,6 +30,9 @@ contract Marketplace {
 
   // create product
   function create_product(string memory _name, uint _price) public{
+    // validation
+    require(bytes(name).length > 0) // required
+    require(_price.length > 0) // required
     products_count++; // increment product count
     // create product
     products[products_count] = Product(products_count,_name,_price,msg.sender,false); 
