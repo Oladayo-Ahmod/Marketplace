@@ -1,6 +1,6 @@
 const MarketPlace = artifacts.require('./Marketplace.sol');
 
-contract('MarketPlace', (accounts)=>{
+contract('MarketPlace', ([deployer,seller,buyer])=>{
     let marketplace;
 
     before(async ()=>{
@@ -27,7 +27,9 @@ contract('MarketPlace', (accounts)=>{
     describe('product', async () =>{
         let result,productCount
         before(async () =>{
-            result = await marketplace.create_product('Iphone XR',web3.utils.toWei('1','Ether'))
+            result = await marketplace.create_product('Iphone XR',web3.utils.toWei('1','Ether'),{
+                from : seller,
+            })
             productCount = await marketplace.products_count()
         })
         it('creates product', async () =>{
@@ -35,7 +37,7 @@ contract('MarketPlace', (accounts)=>{
            const event = result.logs[0].args
            assert.equal(event.id.toNumber(),productCount,'id is correct')
            assert.equal(event.name,'Iphone XR','name is correct')
-           assert.equal(event.owner,'name is correct')
+           assert.equal(event.owner,seller,'seller is correct')
         //    assert.equal(event.price,'10','id is correct')
            assert.equal(event.purchased,false,'purchased is correct')
         })
