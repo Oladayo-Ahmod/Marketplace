@@ -27,7 +27,7 @@ contract('MarketPlace', (accounts)=>{
     describe('product', async () =>{
         let result,productCount
         before(async () =>{
-            result = await marketplace.create_product('Iphone XR',web3.utils.)
+            result = await marketplace.create_product('Iphone XR',web3.utils.toWei('1','Ether'))
             productCount = await marketplace.products_count()
         })
         it('creates product', async () =>{
