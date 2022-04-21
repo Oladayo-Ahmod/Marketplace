@@ -24,10 +24,11 @@ contract('MarketPlace', (accounts)=>{
     })
 
     // test product
-    decribe('product', async () =>{
+    describe('product', async () =>{
         let result,productCount
         before(async () =>{
-            result = await marketplace.create_product()
+            result = await marketplace.create_product('Iphone XR',web3.utils.)
+            productCount = await marketplace.products_count()
         })
         it('creates product', async () =>{
             assert.equal(productCount,1)

@@ -22,6 +22,6 @@ contract Marketplace {
   // create product
   function create_product(string memory _name, uint _price) public{
     products_count ++; // increment product count
-    products[products_count] = Product(products_count,_name,_price,'test',false); 
+    products[products_count] = Product(products_count,_name,_price,msg.sender,false); 
   }
 }
