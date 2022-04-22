@@ -66,7 +66,7 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
            assert.equal(event.id.toNumber(),productCount,'id is correct')
            assert.equal(event.name,'Iphone XR','name is correct')
            assert.equal(event.owner,buyer,'seller is correct')
-        //    assert.equal(event.price,'10','id is correct')
+           assert.equal(event.price,'1000000000000000000','price is correct')
            assert.equal(event.purchased,true,'purchased is correct')
         })
     })
