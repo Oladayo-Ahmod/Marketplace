@@ -61,11 +61,11 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
         
         // test for product purchase
         it('it purchases product', async () =>{
-            // tracks seller balance
+            // tracks seller old balance
             let oldSellerBalance;
             oldSellerBalance = await web3.eth.getBalance(seller)
-            oldSellerBalance = await web3.utils.BN(oldSellerBalance)
-            
+            oldSellerBalance = new web3.utils.BN(oldSellerBalance)
+
             result = await marketplace.purchaseProduct(productCount,{from : buyer,value :web3.utils.toWei('1','Ether')})
            const event = result.logs[0].args
            assert.equal(event.id.toNumber(),productCount,'id is correct')
@@ -73,6 +73,13 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
            assert.equal(event.owner,buyer,'seller is correct')
            assert.equal(event.price,'1000000000000000000','price is correct')
            assert.equal(event.purchased,true,'purchased is correct')
+
+            //    check if seller receives funds
+            let newSellerBalance;
+            newSellerBalance = await web3.eth.getBalance(seller)
+            newSellerBalance = new web3.utils.BN(newSellerBalance)
+
+            
         })
     })
 })
