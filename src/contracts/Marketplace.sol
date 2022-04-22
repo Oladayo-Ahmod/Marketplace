@@ -24,6 +24,15 @@ contract Marketplace {
     bool purchased
   );
 
+  // purchase product event
+  event product_purchased(
+    uint id,
+    string name,
+    uint price,
+    address payable owner,
+    bool purchased
+  );
+
   constructor() public {
     name = "Market Place";
   }
@@ -54,5 +63,8 @@ contract Marketplace {
     // update the product
     products[_id] = _product; 
     // pay the seller
-    address (_seller).transfer(msg.value);_
+    address (_seller).transfer(msg.value);
+
+    emit(product_purchased(products_count,_name,_price,msg.sender,false));
+
   }
