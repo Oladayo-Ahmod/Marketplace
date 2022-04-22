@@ -1,5 +1,7 @@
 const MarketPlace = artifacts.require('./Marketplace.sol');
 
+// import chai for validation
+require('chai').use(require('chai-as-promised')).should();
 contract('MarketPlace', ([deployer,seller,buyer])=>{
     let marketplace;
 
