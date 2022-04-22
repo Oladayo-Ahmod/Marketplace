@@ -11,7 +11,7 @@ contract Marketplace {
     uint id;
     string name;
     uint price;
-    address owner;
+    address payable owner;
     bool purchased;
   }
   
@@ -20,7 +20,7 @@ contract Marketplace {
     uint id,
     string name,
     uint price,
-    address owner,
+    address payable owner,
     bool purchased
   );
 
@@ -42,11 +42,11 @@ contract Marketplace {
 }
 
   //  purchase product
-  function purchaseproduct(uint _id) public {
+  function purchaseproduct(uint _id) public payable {
     // fetch product
     Product memory _product = products[_id];
     //  fetch owner or buyer
-    address _seller = _product.owner;
+    address payable _seller = _product.owner;
     // transfer ownership from seller to buyer
     _product.owner = msg.sender;
     // mark as purchased
