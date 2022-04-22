@@ -64,9 +64,9 @@ contract Marketplace {
     // pay the seller
     address (_seller).transfer(msg.value);
 
-    emit(product_purchased(products_count,product._name,product._price,msg.sender,true));
+    emit product_purchased(products_count,_product.name,_product.price,msg.sender,true);
 
   }
 
-  
+
 }
