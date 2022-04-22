@@ -48,5 +48,12 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
 
         // test for failure
     //    await await marketplace.create_product('',web3.utils.toWei('1','Ether'),{from : seller}).should.be.rejected;
+
+    // test for listing products
+    it('it lists product', async () =>{
+        const products = await marketplace.products()
+        console.log(products)
+    })
+
     })
 })
