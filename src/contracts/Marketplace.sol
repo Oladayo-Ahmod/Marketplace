@@ -44,6 +44,6 @@ contract Marketplace {
   //  purchase product
   function purchaseproduct(uint _id) public {
     // fetch product
-    Product _product = product[_id];
+    Product memory _product = products[_id];
 
   }
