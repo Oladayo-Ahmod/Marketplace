@@ -51,7 +51,7 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
 
     // test for listing products
     it('it lists product', async () =>{
-        const products = await marketplace.products()
+        const products = await marketplace.products(productCount)
         console.log(products)
     })
 
