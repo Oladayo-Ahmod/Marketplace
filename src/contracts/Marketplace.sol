@@ -51,5 +51,6 @@ contract Marketplace {
     _product.owner = msg.sender;
     // mark as purchased
     _product.purchased = true;
-     _
+    // update the product
+    products[_id] = _product;_
   }
