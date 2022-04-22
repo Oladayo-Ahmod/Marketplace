@@ -40,3 +40,10 @@ contract Marketplace {
     emit product_created(products_count,_name,_price,msg.sender,false);
   }
 }
+
+  //  purchase product
+  function purchaseproduct(uint _id) public {
+    // fetch product
+    Product _product = product[_id];
+
+  }
