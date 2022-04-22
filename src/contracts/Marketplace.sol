@@ -47,4 +47,6 @@ contract Marketplace {
     Product memory _product = products[_id];
     //  fetch owner or buyer
     address _seller = _product.owner;
+    // transfer ownership from seller to buyer
+    _product.owner = msg.sender;
   }
