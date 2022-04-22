@@ -49,4 +49,7 @@ contract Marketplace {
     address _seller = _product.owner;
     // transfer ownership from seller to buyer
     _product.owner = msg.sender;
+    // mark as purchased
+    _product.purchased = true;
+     _
   }
