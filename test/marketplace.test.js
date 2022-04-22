@@ -1,7 +1,9 @@
 const MarketPlace = artifacts.require('./Marketplace.sol');
 
 // import chai for validation
-require('chai').use(require('chai-as-promised')).should();
+// require('chai')
+// .use(require('chai-as-promised')).should();
+
 contract('MarketPlace', ([deployer,seller,buyer])=>{
     let marketplace;
 
@@ -43,5 +45,8 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
         //    assert.equal(event.price,'10','id is correct')
            assert.equal(event.purchased,false,'purchased is correct')
         })
+
+        // test for failure
+    //    await await marketplace.create_product('',web3.utils.toWei('1','Ether'),{from : seller}).should.be.rejected;
     })
 })
