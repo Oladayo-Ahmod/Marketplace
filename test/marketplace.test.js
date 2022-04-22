@@ -61,7 +61,7 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
         
         // test for product purchase
         it('it purchases product', async () =>{
-            assert.equal(productCount,1)
+            result = await marketplace.purchaseProduct(productCount,{from : buyer,value :web3.utils.toWei('1','Ether')})
            const event = result.logs[0].args
            assert.equal(event.id.toNumber(),productCount,'id is correct')
            assert.equal(event.name,'Iphone XR','name is correct')

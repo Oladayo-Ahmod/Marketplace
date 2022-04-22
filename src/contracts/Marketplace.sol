@@ -48,10 +48,9 @@ contract Marketplace {
     // trigger event
     emit product_created(products_count,_name,_price,msg.sender,false);
   }
-}
 
   //  purchase product
-  function purchaseproduct(uint _id) public payable {
+  function purchaseProduct(uint _id) public payable {
     // fetch product
     Product memory _product = products[_id];
     //  fetch owner or buyer
@@ -65,6 +64,9 @@ contract Marketplace {
     // pay the seller
     address (_seller).transfer(msg.value);
 
-    emit(product_purchased(products_count,product._name,product._price,msg.sender,false));
+    emit(product_purchased(products_count,product._name,product._price,msg.sender,true));
 
   }
+
+  
+}
