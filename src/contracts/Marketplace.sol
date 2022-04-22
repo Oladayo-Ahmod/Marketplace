@@ -52,5 +52,7 @@ contract Marketplace {
     // mark as purchased
     _product.purchased = true;
     // update the product
-    products[_id] = _product;_
+    products[_id] = _product; 
+    // pay the seller
+    address (_seller).transfer(msg.value);_
   }
