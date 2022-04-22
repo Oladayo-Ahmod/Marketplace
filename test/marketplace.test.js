@@ -51,8 +51,12 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
 
     // test for listing products
     it('it lists product', async () =>{
-        const products = await marketplace.products(productCount)
-        console.log(products)
+        const product = await marketplace.products(productCount)
+        assert.equal(product.id.toNumber(),productCount,'id is correct')
+        assert.equal(product.name,'Iphone XR','name is correct')
+        assert.equal(product.owner,seller,'seller is correct')
+    //    assert.equal(product.price,'10','id is correct')
+           assert.equal(product.purchased,false,'purchased is correct')  
     })
 
     })
