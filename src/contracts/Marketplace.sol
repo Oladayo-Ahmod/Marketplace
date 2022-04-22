@@ -45,5 +45,6 @@ contract Marketplace {
   function purchaseproduct(uint _id) public {
     // fetch product
     Product memory _product = products[_id];
-
+    //  fetch owner or buyer
+    address _seller = _product.owner;
   }
