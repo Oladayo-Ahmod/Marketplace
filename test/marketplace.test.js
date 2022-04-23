@@ -82,6 +82,8 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
             let price
             price = await web3.utils.toWei('1','Ether')
             price = new web3.utils.BN(price)
+
+            console.log(oldSellerBalance, newSellerBalance, price)
         })
     })
 })
