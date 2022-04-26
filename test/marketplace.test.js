@@ -1,3 +1,5 @@
+const { assert } = require("chai");
+
 const MarketPlace = artifacts.require('./Marketplace.sol');
 
 // import chai for validation
@@ -83,7 +85,9 @@ contract('MarketPlace', ([deployer,seller,buyer])=>{
             price = await web3.utils.toWei('1','Ether')
             price = new web3.utils.BN(price)
 
-            console.log(oldSellerBalance, newSellerBalance, price)
+            const expectedBal = oldSellerBalance.add(price)
+            assert.equal(expectedBal.toString(),newSellerBalance.toString())
+            // console.log(oldSellerBalance, newSellerBalance, price)
         })
     })
 })
