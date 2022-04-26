@@ -7,7 +7,7 @@ class App extends Component {
 
   async componentWillMount(){
     await this.loadweb3()
-    this.loadData()
+    await this.loadData()
   }
 
   // load web3
