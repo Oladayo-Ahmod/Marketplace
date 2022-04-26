@@ -63,6 +63,7 @@ class App extends Component {
                   <img src={logo} className="App-logo" alt="logo" />
                 </a>
                 <h1>Dapp University Starter Kit</h1>
+                <p>{this.state.account} </p>
                 <p>
                   Edit <code>src/components/App.js</code> and save to reload.
                 </p>
