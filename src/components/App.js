@@ -26,10 +26,18 @@ class App extends Component {
 
   // load blockchain data
   async loadData(){
-    const account = await window.web3.eth.getAccounts();
-    console.log(account)
+    const accounts = await window.web3.eth.getAccounts();
+    console.log(accounts)
+    this.setState({account : accounts[0]})
   }
 
+  // constructor
+  constructor(props){
+    super(props)
+    this.state = {
+      account : ''
+    }
+  }
   render() {
     return (
       <div>
