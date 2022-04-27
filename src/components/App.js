@@ -29,6 +29,8 @@ class App extends Component {
     const web3 = window.web3
     const accounts = await window.web3.eth.getAccounts();
     this.setState({account : accounts[0]})
+    const networkId = await web3.eth.net.getId()
+    console.log(networkId)
     const abi = Marketplace.abi
     const address = Marketplace.networks[5777].address
     const marketplace = web3.eth.Contract(abi,address);
