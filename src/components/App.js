@@ -26,10 +26,13 @@ class App extends Component {
 
   // load blockchain data
   async loadData(){
+    const web3 = window.web3
     const accounts = await window.web3.eth.getAccounts();
-    console.log(accounts)
     this.setState({account : accounts[0]})
-    console.log(Marketplace.abi, Marketplace.networks[5777])
+    const abi = Marketplace.abi
+    const address = Marketplace.networks[5777].address
+    const marketplace = web3.eth.Contract(abi,address);
+    console.log(marketplace)
   }
 
   // constructor
