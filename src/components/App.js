@@ -37,7 +37,7 @@ class App extends Component {
       console.log(marketplace)
     }
     else{
-      window.alert('Marketplace not detected to detected network')
+      window.alert('Marketplace not deployed to detected network')
     }
   }
 
