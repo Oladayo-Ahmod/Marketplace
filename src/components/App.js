@@ -3,6 +3,7 @@ import Web3 from 'web3';
 import logo from '../logo.png';
 import './App.css';
 import Marketplace from '../abis/Marketplace.json';
+import { Navbar } from 'react-bootstrap';
 class App extends Component {
   
 
@@ -52,7 +53,7 @@ class App extends Component {
   render() {
     return (
       <div>
-       
+       <Navbar account={this.state.account} />
         <div className="container-fluid mt-5">
           <div className="row">
             <main role="main" className="col-lg-12 d-flex text-center">

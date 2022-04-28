@@ -1,4 +1,4 @@
-import React, {component} from 'react'
+import React, {Component} from 'react'
 
 class Navbar extends Component{
     
@@ -13,7 +13,7 @@ class Navbar extends Component{
             >
               MarketPlace 
             </a>
-            <p className="text-white text-sm mt-3">{this.state.account} </p>
+            <p className="text-white text-sm mt-3">{this.props.account} </p>
           </nav>
         );
     }
