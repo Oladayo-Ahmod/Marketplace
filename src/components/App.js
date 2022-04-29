@@ -3,7 +3,8 @@ import Web3 from 'web3';
 import logo from '../logo.png';
 import './App.css';
 import Marketplace from '../abis/Marketplace.json';
-import { Navbar } from 'react-bootstrap';
+// import { Navbar } from 'react-bootstrap';
+import Navbar from './Navbar';
 class App extends Component {
   
 
