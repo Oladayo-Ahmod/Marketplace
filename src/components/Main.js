@@ -37,7 +37,24 @@ class Main extends Component{
                                 <button class="btn btn-primary btn-sm ">Buy </button>
                             </td>
                         </tr>
-                        
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Iphone X</td>
+                            <td>1 Eth</td>
+                            <td>0x123456789098765432</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm ">Buy </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Iphone X</td>
+                            <td>1 Eth</td>
+                            <td>0x123456789098765432</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm ">Buy </button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 
