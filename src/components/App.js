@@ -63,7 +63,8 @@ class App extends Component {
        <Navbar account={this.state.account} />
         <div className="container mt-5">
           <div className="row justify-content-center align-items-center p-4">
-            <Main />
+            {this.loading  ?  <div id="loader" className="text-center"> <p className="text-center"> loading ...</p> </div> : '' }
+            {/* <Main /> */}
           </div>
         </div>
       </div>
