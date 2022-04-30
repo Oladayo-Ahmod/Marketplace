@@ -5,6 +5,7 @@ import './App.css';
 import Marketplace from '../abis/Marketplace.json';
 // import { Navbar } from 'react-bootstrap';
 import Navbar from './Navbar';
+import Main from './Main';
 class App extends Component {
   
 
@@ -60,7 +61,11 @@ class App extends Component {
     return (
       <div>
        <Navbar account={this.state.account} />
-      
+        <div className="container mt-5">
+          <div className="row justify-content-center align-items-center p-4">
+            <Main />
+          </div>
+        </div>
       </div>
     );
   }
