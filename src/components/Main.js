@@ -4,7 +4,7 @@ class Main extends Component{
     
     render(){
         return (
-            <div className="col-md-5">
+            <div className="col-md-6 p-2">
                 <form class="form-group mb-5" novalidate>
                     <h3 className="text-secondary">Add Product</h3>
                     <label for="validationCustom01" class="form-label">Product name</label>
@@ -15,7 +15,7 @@ class Main extends Component{
                     <button class="btn btn-primary" type="submit">Add product</button>
                   </div>
                 </form>
-
+                
                 {/* display product */}
                 <table class="table table-responsive table-bordered">
                     <thead>
