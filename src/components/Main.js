@@ -10,7 +10,7 @@ class Main extends Component{
                     <label for="validationCustom01" class="form-label">Product name</label>
                     <input type="text" class="form-control"  required />
                     <label for="validationCustom01" class="form-label">Product price</label>
-                    <input type="number" class="form-control" value required />
+                    <input type="number" class="form-control" required />
                   <div class="mt-1 ">
                     <button class="btn btn-primary" type="submit">Add product</button>
                   </div>
