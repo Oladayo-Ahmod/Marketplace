@@ -5,7 +5,7 @@ class Main extends Component{
     render(){
         return (
             <div className="col-md-5">
-                <form class="form-group" novalidate>
+                <form class="form-group mb-5" novalidate>
                     <h3 className="text-secondary">Add Product</h3>
                     <label for="validationCustom01" class="form-label">Product name</label>
                     <input type="text" class="form-control" id="validationCustom01" value="" required />
@@ -15,6 +15,31 @@ class Main extends Component{
                     <button class="btn btn-primary" type="submit">Add product</button>
                   </div>
                 </form>
+
+                {/* display product */}
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Owner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
             </div>
         );
     }
