@@ -8,9 +8,9 @@ class Main extends Component{
                 <form class="form-group mb-5" novalidate>
                     <h3 className="text-secondary">Add Product</h3>
                     <label for="validationCustom01" class="form-label">Product name</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="" required />
+                    <input type="text" class="form-control"  required />
                     <label for="validationCustom01" class="form-label">Product price</label>
-                    <input type="number" class="form-control" id="validationCustom01" value="" required />
+                    <input type="number" class="form-control" value required />
                   <div class="mt-1 ">
                     <button class="btn btn-primary" type="submit">Add product</button>
                   </div>
