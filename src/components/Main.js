@@ -24,19 +24,20 @@ class Main extends Component{
                             <th>Name</th>
                             <th>Price</th>
                             <th>Owner</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td scope="row"></td>
-                            <td></td>
-                            <td></td>
+                            <td scope="row">1</td>
+                            <td>Iphone X</td>
+                            <td>1 Eth</td>
+                            <td>0x123456789098765432</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm ">Buy </button>
+                            </td>
                         </tr>
-                        <tr>
-                            <td scope="row"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        
                     </tbody>
                 </table>
                 
