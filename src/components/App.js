@@ -39,7 +39,7 @@ class App extends Component {
     if (networkData) {
       const marketplace = web3.eth.Contract(abi,networkData.address);
       this.setState({marketplace})
-      this.setState({loading : 'false'})
+      this.setState({loading : false})
       
     }
     else{
@@ -63,8 +63,8 @@ class App extends Component {
        <Navbar account={this.state.account} />
         <div className="container mt-5">
           <div className="row justify-content-center align-items-center p-4">
-            {this.loading  ?  <div id="loader" className="text-center"> <p className="text-center"> loading ...</p> </div> : '' }
-            {/* <Main /> */}
+            {this.state.loading  ?  <div id="loader" className="mt-5 bg-red text-center"> <p className="text-center"> loading ...</p> </div> : <Main />}
+            
           </div>
         </div>
       </div>
