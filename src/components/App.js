@@ -37,7 +37,9 @@ class App extends Component {
     const networkData = Marketplace.networks[networkId]
     if (networkData) {
       const marketplace = web3.eth.Contract(abi,networkData.address);
-      console.log(marketplace)
+      this.setState({marketplace})
+      this.setState({loading : 'false'})
+      
     }
     else{
       window.alert('Marketplace not deployed to detected network')
@@ -48,7 +50,10 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      account : ''
+      account : '',
+      productCount : 0,
+      product : [],
+      loading : true
     }
   }
   render() {
