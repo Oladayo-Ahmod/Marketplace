@@ -56,6 +56,7 @@ class App extends Component {
       product : [],
       loading : true
     }
+    this.create_product = this.create_product.bind(this)
   }
   create_product(name,price){
     this.state.loading({loading : true})
@@ -71,7 +72,8 @@ class App extends Component {
        <Navbar account={this.state.account} />
         <div className="container mt-5">
           <div className="row justify-content-center align-items-center p-4">
-            {this.state.loading  ?  <div id="loader" className="mt-5 bg-red text-center"> <p className="text-center"> loading ...</p> </div> : <Main />}
+            {this.state.loading  ?  <div id="loader" className="mt-5 bg-red text-center"> <p className="text-center"> loading ...</p> </div> 
+            : <Main create_product = {this.create_product} />}
             
           </div>
         </div>
