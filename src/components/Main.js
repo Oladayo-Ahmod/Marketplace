@@ -5,12 +5,16 @@ class Main extends Component{
     render(){
         return (
             <div className="col-md-6 p-2">
-                <form class="form-group mb-5" novalidate>
+                <form class="form-group mb-5" onSubmit={(event) =>{
+                    const name = this.productName.value
+                    const price = this.productPrice.value
+                    this.props.create_product(name,price)
+                }}>
                     <h3 className="text-secondary">Add Product</h3>
                     <label for="validationCustom01" class="form-label">Product name</label>
-                    <input type="text" class="form-control"  required />
+                    <input type="text" ref={(input) => this.productName = input} class="form-control"  required />
                     <label for="validationCustom01" class="form-label">Product price</label>
-                    <input type="number" class="form-control" required />
+                    <input type="number" ref={(input) => this.productPrice = input} class="form-control" required />
                   <div class="mt-1 ">
                     <button class="btn btn-primary" type="submit">Add product</button>
                   </div>

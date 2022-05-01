@@ -65,14 +65,15 @@ class App extends Component {
     }).once('receipt',(receipt)=>{
       this.setState({loading : false})
     })
-  }
+  } 
   render() {
     return (
       <div>
        <Navbar account={this.state.account} />
         <div className="container mt-5">
           <div className="row justify-content-center align-items-center p-4">
-            {this.state.loading  ?  <div id="loader" className="mt-5 bg-red text-center"> <p className="text-center"> loading ...</p> </div> 
+            {this.state.loading  
+            ?  <div id="loader" className="mt-5 bg-red text-center"> <p className="text-center"> loading ...</p> </div> 
             : <Main create_product = {this.create_product} />}
             
           </div>
