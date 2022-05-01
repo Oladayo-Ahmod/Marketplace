@@ -7,7 +7,7 @@ class Main extends Component{
             <div className="col-md-6 p-2">
                 <form class="form-group mb-5" onSubmit={(event) =>{
                     const name = this.productName.value
-                    const price = this.productPrice.value
+                    const price = window.web3.utils.toweil(this.productPrice.value.toString(),'Ether')
                     this.props.create_product(name,price)
                 }}>
                     <h3 className="text-secondary">Add Product</h3>
