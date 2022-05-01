@@ -57,6 +57,12 @@ class App extends Component {
       loading : true
     }
   }
+  create_product(name,price){
+    this.state.loading({loading : true})
+    this.state.marketplace.methods.create_product(name,price).send({
+      from : 
+    })
+  }
   render() {
     return (
       <div>
