@@ -5,23 +5,23 @@ class Main extends Component{
     render(){
         return (
             <div className="col-md-6 p-2">
-                <form class="form-group mb-5" onSubmit={(event) =>{
+                <form className="form-group mb-5" onSubmit={(event) =>{
                     const name = this.productName.value
                     const price = window.web3.utils.toweil(this.productPrice.value.toString(),'Ether')
                     this.props.create_product(name,price)
                 }}>
                     <h3 className="text-secondary">Add Product</h3>
-                    <label for="validationCustom01" class="form-label">Product name</label>
-                    <input type="text" ref={(input) => this.productName = input} class="form-control"  required />
-                    <label for="validationCustom01" class="form-label">Product price</label>
-                    <input type="number" ref={(input) => this.productPrice = input} class="form-control" required />
-                  <div class="mt-1 ">
-                    <button class="btn btn-primary" type="submit">Add product</button>
+                    <label  className="form-label">Product name</label>
+                    <input type="text" ref={(input) => this.productName = input} className="form-control"  required />
+                    <label  className="form-label">Product price</label>
+                    <input type="number" ref={(input) => this.productPrice = input} className="form-control" required />
+                  <div className="mt-1 ">
+                    <button className="btn btn-primary" type="submit">Add product</button>
                   </div>
                 </form>
                 
                 {/* display product */}
-                <table class="table table-responsive table-bordered">
+                <table className="table table-responsive table-bordered">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -38,7 +38,7 @@ class Main extends Component{
                             <td>1 Eth</td>
                             <td>0x123456789098765432</td>
                             <td>
-                                <button class="btn btn-primary btn-sm ">Buy </button>
+                                <button className="btn btn-primary btn-sm ">Buy </button>
                             </td>
                         </tr>
                         <tr>
@@ -47,7 +47,7 @@ class Main extends Component{
                             <td>1 Eth</td>
                             <td>0x123456789098765432</td>
                             <td>
-                                <button class="btn btn-primary btn-sm ">Buy </button>
+                                <button className="btn btn-primary btn-sm ">Buy </button>
                             </td>
                         </tr>
                         <tr>
@@ -56,7 +56,7 @@ class Main extends Component{
                             <td>1 Eth</td>
                             <td>0x123456789098765432</td>
                             <td>
-                                <button class="btn btn-primary btn-sm ">Buy </button>
+                                <button className="btn btn-primary btn-sm ">Buy </button>
                             </td>
                         </tr>
                     </tbody>
