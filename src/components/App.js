@@ -40,9 +40,14 @@ class App extends Component {
     if (networkData) {
       const marketplace = web3.eth.Contract(abi,networkData.address);
       const product_count = await marketplace.methods.products_count().call()
-      console.log(product_count)
+      this.setState({product_count})
       this.setState({marketplace})
       this.setState({loading : false})
+      for (let i = 0; i < product_count; i++) {
+        const products = await marketplace.methods.products(i).call()
+        this.setState({products : [...this.state.product, products ]})
+        
+      }
       
     }
     else{
