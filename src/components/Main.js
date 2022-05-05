@@ -38,7 +38,7 @@ class Main extends Component{
                                 <tr key={key}>
                                     <td scope="row">{product.id.toString()}</td>
                                     <td>{product.name}</td>
-                                    <td>{window.web3.utils.fromWei(product.price.toString(),'Ether')}</td>
+                                    <td>{window.web3.utils.fromWei(product.price.toString(),'Ether')} Eth</td>
                                     <td>{product.owner}</td>
                                     <td>
                                         <button className="btn btn-primary btn-sm ">Buy </button>
