@@ -36,10 +36,10 @@ class Main extends Component{
                         {this.props.products.map((product,key)=>{
                             return(
                                 <tr key={key}>
-                                    <td scope="row">1</td>
-                                    <td>Iphone X</td>
-                                    <td>1 Eth</td>
-                                    <td>0x123456789098765432</td>
+                                    <td scope="row">{product.id.toString()}</td>
+                                    <td>{product.name}</td>
+                                    <td>{window.web3.utils.fromWei(product.price.toString(),'Ether')}</td>
+                                    <td>{product.owner}</td>
                                     <td>
                                         <button className="btn btn-primary btn-sm ">Buy </button>
                                     </td>
