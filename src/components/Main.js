@@ -33,33 +33,21 @@ class Main extends Component{
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Iphone X</td>
-                            <td>1 Eth</td>
-                            <td>0x123456789098765432</td>
-                            <td>
-                                <button className="btn btn-primary btn-sm ">Buy </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Iphone X</td>
-                            <td>1 Eth</td>
-                            <td>0x123456789098765432</td>
-                            <td>
-                                <button className="btn btn-primary btn-sm ">Buy </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Iphone X</td>
-                            <td>1 Eth</td>
-                            <td>0x123456789098765432</td>
-                            <td>
-                                <button className="btn btn-primary btn-sm ">Buy </button>
-                            </td>
-                        </tr>
+                        {this.props.products.map((product,key)=>{
+                            return(
+                                <tr key={key}>
+                                    <td scope="row">1</td>
+                                    <td>Iphone X</td>
+                                    <td>1 Eth</td>
+                                    <td>0x123456789098765432</td>
+                                    <td>
+                                        <button className="btn btn-primary btn-sm ">Buy </button>
+                                    </td>
+                                </tr>
+                            )
+                        })}
+                        
+                       
                     </tbody>
                 </table>
                 
