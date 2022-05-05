@@ -84,7 +84,7 @@ class App extends Component {
           <div className="row justify-content-center align-items-center p-4">
             {this.state.loading  
             ?  <div id="loader" className="mt-5 bg-red text-center"> <p className="text-center"> loading ...</p> </div> 
-            : <Main create_product = {this.create_product} />}
+            : <Main products = {this.state.products} create_product = {this.create_product} />}
             
           </div>
         </div>
