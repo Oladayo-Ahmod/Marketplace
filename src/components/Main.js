@@ -4,7 +4,7 @@ class Main extends Component{
     
     render(){
         return (
-            <div className="col-md-6 p-2">
+            <div className="col-md-8 p-2">
                 <form className="form-group mb-5" onSubmit={(event) =>{
                     event.preventDefault()
                     const name = this.productName.value
@@ -41,7 +41,13 @@ class Main extends Component{
                                     <td>{window.web3.utils.fromWei(product.price.toString(),'Ether')} Eth</td>
                                     <td>{product.owner}</td>
                                     <td>
-                                        <button className="btn btn-primary btn-sm ">Buy </button>
+                                        <button
+                                        name={product.id}
+                                        value={product.price}
+                                        onClick = {(event)=>{
+                                            this.props.purchase_product(event.target.name, event.target.value)
+                                        }}
+                                        className="btn btn-primary btn-sm ">Buy </button>
                                     </td>
                                 </tr>
                             )
