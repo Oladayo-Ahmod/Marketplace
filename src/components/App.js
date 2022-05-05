@@ -45,10 +45,12 @@ class App extends Component {
       this.setState({loading : false})
       for (let i = 0; i < product_count; i++) {
         const products = await marketplace.methods.products(i).call()
-        this.setState({products : [...this.state.product, products ]})
+        this.setState({products : [...this.state.products, products ]})
         
       }
-      
+      this.setState({loading : false})
+      // console.log(this.products)
+      console.log(this.state.products)
     }
     else{
       window.alert('Marketplace not deployed to detected network')
@@ -61,7 +63,7 @@ class App extends Component {
     this.state = {
       account : '',
       productCount : 0,
-      product : [],
+      products : [],
       loading : true
     }
     this.create_product = this.create_product.bind(this)
