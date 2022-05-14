@@ -41,13 +41,16 @@ class Main extends Component{
                                     <td>{window.web3.utils.fromWei(product.price.toString(),'Ether')} Eth</td>
                                     <td>{product.owner}</td>
                                     <td>
-                                        <button
-                                        name={product.id}
-                                        value={product.price}
-                                        onClick = {(event)=>{
-                                            this.props.purchase_product(event.target.name, event.target.value)
-                                        }}
-                                        className="btn btn-primary btn-sm ">Buy </button>
+                                    {!product.purchased ? <button
+                                            name={product.id}
+                                            value={product.price}
+                                            onClick = {(event)=>{
+                                                this.props.purchase_product(event.target.name, event.target.value)
+                                            }}
+                                            className="btn btn-primary btn-sm ">Buy
+                                            </button>
+                                    : null}
+                                        
                                     </td>
                                 </tr>
                             )
